@@ -1,0 +1,111 @@
+/* calendario.css */
+
+body {
+    /* Gradiente suave de rosa */
+    background: linear-gradient(to bottom, #fce4ec, #ffccd5);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo ao topo (para o botão Voltar) */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 20px; /* Espaço para o botão Voltar */
+}
+
+.love-journey-container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px; /* Largura para acomodar a contagem */
+}
+
+/* Botão Voltar */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #e91e63;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Títulos */
+h1 {
+    color: #e91e63; 
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #c2185b;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.heart-icon {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Foto de Perfil */
+.profile-photo-container {
+    margin: 20px 0;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover;
+    border: 5px solid white; /* Borda branca */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contador de Tempo */
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+    min-width: 50px; /* Garante que todos os blocos tenham um tamanho mínimo */
+}
+
+.time-unit span {
+    color: #e91e63; /* Cor dos números (rosa forte) */
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.time-unit p {
+    color: #c2185b; /* Cor do texto (Anos, Meses, etc.) */
+    font-size: 10px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.separator {
+    color: #e91e63;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Nota de rodapé */
+.footer-note {
+    color: #e91e63;
+    font-size: 16px;
+    margin-top: 20px;
+}

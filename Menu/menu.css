@@ -1,0 +1,92 @@
+body {
+    background-color: #fce4ec; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* Configuração do GIF de Fundo */
+    background-image: url('https://cliply.co/wp-content/uploads/2020/01/402001120_PAPER_HEARTS_400px.gif');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.gift-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Camada de cor rosa com 90% de opacidade para suavizar o GIF */
+    background-color: rgba(252, 228, 236, 0.9); 
+    z-index: -1; 
+}
+.menu-container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; 
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive; 
+    color: #e91e63; 
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #c2185b;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.cards-layout-vertical {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.card {
+    text-decoration: none; 
+    color: #333;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #c2185b; 
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #f06292;
+    font-size: 12px;
+    margin: 0;
+}
+
+.icon-placeholder {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f8bbd0; 
+    border-radius: 10px;
+    font-size: 24px; 
+    margin-bottom: 10px;
+}

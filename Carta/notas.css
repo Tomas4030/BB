@@ -1,0 +1,132 @@
+/* notas.css */
+
+/* Fundo e Container Geral */
+body {
+    background: linear-gradient(to bottom, #fce4ec, #ffccd5);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* Importante para esconder a carta antes de deslizar */
+}
+
+.love-note-container {
+    text-align: center;
+    position: relative;
+}
+
+/* Botão Voltar */
+.back-button {
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    right: 30;
+    text-decoration: none;
+    color: #e91e63;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* --- ENVELOPE (O GIF ou Imagem Clicável) --- */
+.envelope {
+    width: 350px;
+    height: 280px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 5;
+    position: relative;
+    /* Estilo do coração do envelope (como na sua imagem) */
+    background-image: url('https://cdn.pixabay.com/animation/2023/07/24/12/23/12-23-02-26__480.png');
+    /* Sua imagem do envelope */
+    background-size: cover;
+    background-position: center;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.click-prompt {
+    position: absolute;
+    bottom: -30px;
+    color: #e91e63;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* --- CARTA (A Animação Deslizante) --- */
+.letter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo semi-transparente */
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Ponto de partida: Totalmente fora da tela (abaixo) */
+    transform: translateY(100%);
+    transition: transform 1.5s ease-in-out;
+    /* Animação de 1.5s */
+}
+
+/* Estado Ativo: Quando a classe 'active' é adicionada, desliza para o topo (posição 0) */
+.letter-overlay.active {
+    transform: translateY(0);
+}
+
+.letter-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    height: 80vh;
+    /* Ocupa 80% da altura da tela */
+    overflow-y: auto;
+    /* Permite rolar se o texto for muito longo */
+    position: relative;
+}
+
+.letter-text h2,
+.letter-text h3 {
+    color: #c2185b;
+    font-family: Georgia, serif;
+    /* Fonte mais clássica */
+    margin-top: 0;
+}
+
+.letter-text p {
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Botão de Fechar (o 'X') */
+.close-button {
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #e91e63;
+    cursor: pointer;
+    float: right;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}

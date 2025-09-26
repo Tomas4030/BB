@@ -1,0 +1,148 @@
+/* style.css */
+
+body {
+    background-color: #fce4ec; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* Configuração do GIF de Fundo */
+    background-image: url('https://cliply.co/wp-content/uploads/2020/01/402001120_PAPER_HEARTS_400px.gif');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.gift-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Camada de cor rosa com 90% de opacidade para suavizar o GIF */
+    background-color: rgba(252, 228, 236, 0.9); 
+    z-index: -1; 
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+}
+
+.bow-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #c2185b;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #f06292;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Estado Normal do Campo de Senha */
+.password-input-container {
+    display: flex;
+    align-items: center;
+    background-color: #37474f; /* Cor escura original */
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease; /* Transição suave para o estado de sucesso */
+}
+
+.lock-icon {
+    color: white; 
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.5s ease;
+}
+
+#passwordDisplay {
+    background: none;
+    border: none;
+    color: white; /* Cor branca para os números */
+    font-size: 24px;
+    letter-spacing: 5px; /* Espaçamento entre os números */
+    width: 100%;
+    text-align: center;
+    outline: none;
+    transition: color 0.5s ease;
+}
+
+/* NOVO: Estilos de SUCESSO (Verde) */
+.success-state {
+    background-color: #4CAF50; /* Cor de fundo verde */
+}
+
+.success-state .lock-icon {
+    color: white; /* Cor do cadeado no sucesso */
+}
+
+.success-state #passwordDisplay {
+    color: #DCEDC8; /* Cor dos números no sucesso */
+}
+
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.key {
+    background-color: #f8bbd0;
+    color: #c2185b;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.key:active {
+    background-color: #f48fb1;
+}
+
+.backspace {
+    background-color: #e0e0e0;
+    color: #37474f;
+    font-weight: bold;
+}
+
+.backspace:active {
+    background-color: #bdbdbd;
+}
+
+.asterisk {
+    /* Ajuste para que o '*' tenha o mesmo estilo */
+    font-size: 24px; 
+    color: #c2185b;
+}
+
+
+.love-note {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: #c2185b;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.heart {
+    color: #e91e63;
+}

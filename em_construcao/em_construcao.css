@@ -1,0 +1,85 @@
+/* em_construcao.css */
+
+/* Fundo */
+body {
+    /* Gradiente suave de rosa, mantendo o tema */
+    background: linear-gradient(to bottom right, #fce4ec, #ffccd5);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Caixa branca semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone de Coração */
+.heart-icon {
+    font-size: 60px;
+    color: #e91e63; /* Rosa forte */
+    margin-bottom: 20px;
+    /* Animação suave de pulsação */
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Títulos e Texto */
+h1 {
+    color: #c2185b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.message {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.countdown {
+    color: #e91e63;
+    font-size: 16px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* --- Barra de Progresso (Simples) --- */
+.loading-bar {
+    width: 80%;
+    height: 8px;
+    background-color: #f8bbd0;
+    border-radius: 4px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0; /* Começa em zero */
+    background-color: #e91e63;
+    border-radius: 4px;
+    /* Animação de progresso */
+    animation: loading 3s infinite linear; 
+}
+
+/* Definições da Animação */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 80%; } /* Finge que o progresso chega a 80% */
+}

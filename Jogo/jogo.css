@@ -1,0 +1,130 @@
+/* jogo.css */
+
+/* Fundo e Container */
+body {
+    background: linear-gradient(to bottom, #fce4ec, #ffccd5);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+}
+
+/* Botão Voltar */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #e91e63;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Títulos */
+h1 {
+    color: #e91e63; 
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #c2185b;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Tabuleiro */
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background-color: white; 
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Card base */
+.card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; 
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, border 0.4s; /* Adiciona transição para a borda */
+    border-radius: 10px;
+    /* Borda inicial transparente */
+    border: 3px solid transparent;
+}
+
+/* Efeito de virar */
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+/* Faces do Cartão */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Frente (O ponto de interrogação) */
+.card-front {
+    background-color: white;
+    color: #f8bbd0;
+    /* Borda tracejada rosa para a interrogação */
+    border: 3px dashed #f8bbd0; 
+}
+
+/* Verso (A Foto) */
+.card-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+    /* Borda sólida para a foto */
+    border: 3px solid #f06292; 
+}
+
+/* Estado de Acerto (MATCH) - O par fica visível e estilizado */
+.card.match {
+    pointer-events: none; /* Impede novos cliques */
+    opacity: 0.9; /* Suavemente mais claro */
+    /* Garante que o cartão acertado não volte ao estado inicial */
+}
+
+/* Ajustes para o estado de match */
+.card.match .card-front {
+    display: none; /* Esconde a interrogação após o acerto */
+}
+
+.card.match .card-back {
+    /* Mantém a face de trás visível no estado de match */
+    transform: rotateY(0deg); 
+}
+
+/* Mensagem de Vitória */
+.win-message {
+    margin-top: 40px;
+    color: #e91e63;
+    display: none; 
+}
